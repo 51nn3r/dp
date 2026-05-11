@@ -1,0 +1,34 @@
+\chapter*{Terminology}
+
+\section*{Symbols}
+
+\begin{itemize}
+    \setlength\itemsep{2px}
+    \item $\mathcal{S}, \mathcal{A}$ -- state and action spaces of an MDP.
+    \item $\pi(a \mid s)$ -- policy: a distribution over actions conditioned on a state.
+    \item $r_t, R$ -- per-step reward and the (terminal) episode return.
+    \item $\tau = (s_0, a_0, s_1, a_1, \dots, s_T)$ -- trajectory.
+    \item $\phi_i(v)$ -- Shapley value of player $i$ in cooperative game with value function $v$.
+    \item $z_t$ -- latent state of a world model at time $t$.
+    \item $a^{\bot}$ -- baseline (no-op) action used to construct counterfactual coalitions.
+    \item $M$ -- number of Monte Carlo Shapley samples per trajectory.
+\end{itemize}
+
+\section*{Abbreviations}
+
+\begin{itemize}
+    \setlength\itemsep{2px}
+    \item \textbf{RL} -- Reinforcement Learning.
+    \item \textbf{MDP} -- Markov Decision Process.
+    \item \textbf{POMDP} -- Partially Observable Markov Decision Process.
+    \item \textbf{TD} -- Temporal Difference.
+    \item \textbf{PPO} -- Proximal Policy Optimization.
+    \item \textbf{RLHF} -- Reinforcement Learning from Human Feedback.
+    \item \textbf{LLM} -- Large Language Model.
+    \item \textbf{SCAR} -- Shapley Credit Assignment for More Efficient RLHF.
+    \item \textbf{RSSM} -- Recurrent State-Space Model (Dreamer's world model).
+    \item \textbf{HCA} -- Hindsight Credit Assignment.
+    \item \textbf{RUDDER} -- Return Decomposition for Delayed Rewards.
+    \item \textbf{KL} -- Kullback--Leibler divergence.
+    \item \textbf{GAE} -- Generalized Advantage Estimation.
+\end{itemize}

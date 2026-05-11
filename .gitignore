@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDEs
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# LaTeX build artefacts
+thesis/**/*.aux
+thesis/**/*.log
+thesis/**/*.out
+thesis/**/*.toc
+thesis/**/*.lof
+thesis/**/*.lot
+thesis/**/*.bbl
+thesis/**/*.blg
+thesis/**/*.synctex.gz
+thesis/**/*.fdb_latexmk
+thesis/**/*.fls
+thesis/**/_minted-*/
+
+# Original FMFI template archive (kept locally only, too large for git)
+thesis/LaTex Diplomova Praca.zip
+
+# Local-only working drafts (everything in docs/ is private except EN/SK paper notes)
+thesis/ru/
+docs/*.md
+docs/notes/
+docs/key_papers/*.md
+
+# Experiment outputs
+experiments/runs/
+experiments/checkpoints/
+experiments/logs/
+wandb/
+*.pt
+*.ckpt
+*.pth
+
+# Datasets and model caches (none expected, but just in case)
+data/
+*.h5
+*.hdf5
+
+# Local environment
+.env
+.env.local

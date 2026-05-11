@@ -1,0 +1,157 @@
+\documentclass[12pt, twoside, openany]{book}
+\linespread{1.25}
+\pagestyle{plain}
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3.5cm,right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{textcomp}
+\usepackage{emptypage}
+\usepackage{natbib}
+\usepackage[hidelinks,breaklinks]{hyperref}
+
+\def\mfrok{2026}
+\def\mftitle{Shapley-Based Credit Assignment for the Dreamer Algorithm in Terminal-Reward Tasks}
+\def\mfthesistype{Master's Thesis}
+\def\mfauthor{Bc. Aleksandr Bukhtoiarov}
+\def\mfskolitel{Mgr. Marek Šuppa}
+\def\mfplacedate{Bratislava, \mfrok}
+\def\mfuniversity{COMENIUS UNIVERSITY IN BRATISLAVA}
+\def\mffaculty{FACULTY OF MATHEMATICS, PHYSICS AND INFORMATICS}
+\def\mfodbor{Applied Informatics}
+\def\program{Applied Informatics}
+\def\mfpracovisko{Department of Applied Informatics}
+
+\graphicspath{{../images/}}
+
+\begin{document}
+\frontmatter
+
+\thispagestyle{empty}
+
+\noindent
+\begin{minipage}{\textwidth}
+    \begin{center}
+        \textbf{\mfuniversity \\
+        \mffaculty}
+    \end{center}
+\end{minipage}
+
+\vfill
+\begin{figure}[!hbt]
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{logo_fmph.png}
+    \end{center}
+\end{figure}
+\begin{center}
+        \textbf{\MakeUppercase{\Large\mftitle}}\\[6pt]
+        \mfthesistype
+\end{center}
+\vfill
+\mfrok \hfill
+\mfauthor
+\cleardoublepage
+
+\thispagestyle{empty}
+\noindent
+\begin{minipage}{\textwidth}
+    \begin{center}
+        \textbf{\mfuniversity \\
+        \mffaculty}
+    \end{center}
+\end{minipage}
+
+\vfill
+\begin{figure}[!hbt]
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{logo_fmph.png}
+    \end{center}
+\end{figure}
+
+\begin{center}
+    \textbf{\MakeUppercase{\Large\mftitle}}\\[6pt]
+    \mfthesistype
+\end{center}
+\vfill
+
+\begin{tabular}{l l}
+Study program: & \program \\
+Branch of study: & \mfodbor \\
+Department:     & \mfpracovisko \\
+Supervisor:     & \mfskolitel \\
+\end{tabular}
+
+\vfill
+\noindent
+\mfplacedate \hfill
+\mfauthor
+\cleardoublepage
+
+{~}\vspace{12cm}
+
+\noindent
+\begin{minipage}{0.25\textwidth}~\end{minipage}
+\thispagestyle{empty}
+\begin{minipage}{0.75\textwidth}
+I hereby declare that I have written this thesis by myself, only with the help of the referenced literature, under the careful supervision of my thesis advisor.
+\newline \newline
+\end{minipage}
+\vfill
+~ \hfill {\hbox to 6cm{\dotfill}} \\
+\mfplacedate \hfill \mfauthor
+\vfill\eject \cleardoublepage
+
+\newpage
+\thispagestyle{empty}
+\chapter*{Acknowledgement}\label{chap:thank_you}
+
+\vfill\eject
+
+\input{ai_usage}
+
+\newpage
+\thispagestyle{empty}
+\chapter*{Abstract}\label{chap:abstract_en}
+\input{abstract}
+\paragraph*{Keywords: reinforcement learning, world models, Dreamer, credit assignment, Shapley values, terminal reward, RLHF}
+
+\newpage
+\tableofcontents
+
+\newpage
+\listoffigures
+\listoftables
+
+\input{terminology}
+
+\mainmatter
+
+\input{motivation}
+\input{chapters/background}
+\input{chapters/method}
+\input{chapters/implementation}
+\input{chapters/experiments}
+\input{conclusion}
+
+\backmatter
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{../references}
+
+\end{document}

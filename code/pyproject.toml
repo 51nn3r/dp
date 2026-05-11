@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shapley-dreamer"
+version = "0.0.1"
+description = "Shapley-based credit assignment for the Dreamer algorithm in terminal-reward tasks"
+requires-python = ">=3.10"
+authors = [{ name = "Aleksandr Bukhtoiarov" }]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["shapley_dreamer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["../tests"]
+pythonpath = ["."]

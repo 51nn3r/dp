@@ -1,0 +1,158 @@
+\documentclass[12pt, twoside, openany]{book}
+\linespread{1.25}
+\pagestyle{plain}
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3.5cm,right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\babelprovide[main, import]{slovak}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{textcomp}
+\usepackage{emptypage}
+\usepackage{natbib}
+\usepackage[hidelinks,breaklinks]{hyperref}
+
+\def\mfrok{2026}
+\def\mftitle{Shapleyho metóda priraďovania zásluh pre algoritmus Dreamer v úlohách s terminálnou odmenou}
+\def\mfthesistype{Diplomová práca}
+\def\mfauthor{Bc. Aleksandr Bukhtoiarov}
+\def\mfskolitel{Mgr. Marek Šuppa}
+\def\mfplacedate{Bratislava, \mfrok}
+\def\mfuniversity{UNIVERZITA KOMENSKÉHO V BRATISLAVE}
+\def\mffaculty{FAKULTA MATEMATIKY, FYZIKY A INFORMATIKY}
+\def\mfodbor{Aplikovaná informatika}
+\def\program{Aplikovaná informatika}
+\def\mfpracovisko{Katedra aplikovanej informatiky}
+
+\graphicspath{{../images/}}
+
+\begin{document}
+\frontmatter
+
+\thispagestyle{empty}
+
+\noindent
+\begin{minipage}{\textwidth}
+    \begin{center}
+        \textbf{\mfuniversity \\
+        \mffaculty}
+    \end{center}
+\end{minipage}
+
+\vfill
+\begin{figure}[!hbt]
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{logo_fmph.png}
+    \end{center}
+\end{figure}
+\begin{center}
+        \textbf{\MakeUppercase{\Large\mftitle}}\\[6pt]
+        \mfthesistype
+\end{center}
+\vfill
+\mfrok \hfill
+\mfauthor
+\cleardoublepage
+
+\thispagestyle{empty}
+\noindent
+\begin{minipage}{\textwidth}
+    \begin{center}
+        \textbf{\mfuniversity \\
+        \mffaculty}
+    \end{center}
+\end{minipage}
+
+\vfill
+\begin{figure}[!hbt]
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{logo_fmph.png}
+    \end{center}
+\end{figure}
+
+\begin{center}
+    \textbf{\MakeUppercase{\Large\mftitle}}\\[6pt]
+    \mfthesistype
+\end{center}
+\vfill
+
+\begin{tabular}{l l}
+Študijný program: & \program \\
+Študijný odbor:   & \mfodbor \\
+Katedra:          & \mfpracovisko \\
+Školiteľ:         & \mfskolitel \\
+\end{tabular}
+
+\vfill
+\noindent
+\mfplacedate \hfill
+\mfauthor
+\cleardoublepage
+
+{~}\vspace{12cm}
+
+\noindent
+\begin{minipage}{0.25\textwidth}~\end{minipage}
+\thispagestyle{empty}
+\begin{minipage}{0.75\textwidth}
+Čestne vyhlasujem, že som túto diplomovú prácu vypracoval samostatne s~použitím uvedenej literatúry a pod~odborným vedením vedúceho diplomovej práce.
+\newline \newline
+\end{minipage}
+\vfill
+~ \hfill {\hbox to 6cm{\dotfill}} \\
+\mfplacedate \hfill \mfauthor
+\vfill\eject \cleardoublepage
+
+\newpage
+\thispagestyle{empty}
+\chapter*{Poďakovanie}\label{chap:thank_you}
+
+\vfill\eject
+
+\input{ai_usage}
+
+\newpage
+\thispagestyle{empty}
+\chapter*{Abstrakt}\label{chap:abstract_sk}
+\input{abstract}
+\paragraph*{Kľúčové slová: posilňované učenie, modely sveta, Dreamer, credit assignment, Shapleyho hodnoty, terminálna odmena, RLHF}
+
+\newpage
+\tableofcontents
+
+\newpage
+\listoffigures
+\listoftables
+
+\input{terminology}
+
+\mainmatter
+
+\input{motivation}
+\input{chapters/background}
+\input{chapters/method}
+\input{chapters/implementation}
+\input{chapters/experiments}
+\input{conclusion}
+
+\backmatter
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{../references}
+
+\end{document}
